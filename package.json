@@ -1,0 +1,23 @@
+{
+  "name": "app-desigocc",
+  "version": "1.0.0",
+  "description": "Normal Framework driver for Siemens Desigo CC via NORIS Web Service Interface",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "npx tsc",
+    "configure": "npx applications-sdk configure",
+    "deploy": "npx applications-sdk deploy"
+  },
+  "dependencies": {
+    "@normalframework/applications-sdk": "0.1.96",
+    "@grpc/grpc-js": "*",
+    "@buf/normalframework_nf.grpc_node": "1.13.0-20250528015943-bda79e821714.1",
+    "axios": "^1.6.0",
+    "pg": "^8.11.0",
+    "typescript": "^5.0.2",
+    "uuid": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

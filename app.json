@@ -1,0 +1,83 @@
+{
+  "name": "Desigo CC NORIS API Driver",
+  "options": [
+    {
+      "name": "baseUrl",
+      "optionType": "TYPE_STRING",
+      "required": true
+    },
+    {
+      "name": "username",
+      "optionType": "TYPE_STRING",
+      "required": true
+    },
+    {
+      "name": "password",
+      "optionType": "TYPE_STRING",
+      "secret": true,
+      "required": true
+    },
+    {
+      "name": "systemId",
+      "optionType": "TYPE_SIGNED",
+      "defaultValue": {
+        "signed": 1
+      }
+    },
+    {
+      "name": "viewId",
+      "optionType": "TYPE_SIGNED"
+    },
+    {
+      "name": "action",
+      "optionType": "TYPE_STRING",
+      "required": false
+    },
+    {
+      "name": "rootDesignation",
+      "optionType": "TYPE_STRING",
+      "required": false
+    }
+  ],
+  "layer": {
+    "name": "hpl:desigocc",
+    "indexed": true,
+    "defaultDisplayAttrs": [
+      "systemName",
+      "objectId",
+      "designation"
+    ],
+    "structuredComponents": [
+      {
+        "name": "objectId",
+        "type": "TAG"
+      },
+      {
+        "name": "objectModelName",
+        "type": "TAG"
+      },
+      {
+        "name": "designation",
+        "type": "TAG"
+      },
+      {
+        "name": "designationTokens",
+        "options": [
+          "AS designation_text TEXT NOSTEM"
+        ]
+      },
+      {
+        "name": "systemName",
+        "type": "TAG"
+      },
+      {
+        "name": "managedTypeName",
+        "type": "TAG"
+      }
+    ],
+    "driver": {
+      "grpcService": "localhost:10002"
+    }
+  },
+  "minNfVersion": "3.8.4-1"
+}
