@@ -1,0 +1,11 @@
+{
+  "id": "a4e2f891-3c7d-4b8e-9f1a-6d5c2e0b7a3f",
+  "name": "ui-server",
+  "entryPoint": "/hooks/ui-server.js",
+  "points": {
+    "labelAttribute": "name",
+    "noPoints": true
+  },
+  "mode": "MODE_ON_REQUEST",
+  "invokeTimeout": "3600s"
+}
